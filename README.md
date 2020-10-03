@@ -9,16 +9,22 @@ If you want to login to Grafana you can use the `admin / password` combination i
 
 ### Start & Stop the applications
 
-- First build the spring boot application:
+#### First build the spring boot application:
 
 ```bash
 mvn clean package
 ```
 
-- Then, when the application has been build, we can start our services by running:
+#### Then, when the application has been build, we can start our services by running:
 
 ```bash
 docker-compose up
+```
+
+#### We can stop&remove containers by running:
+
+```bash
+docker-compose down
 ```
 
 After all services have started successfully, you can navigate to the following urls:
@@ -26,9 +32,3 @@ After all services have started successfully, you can navigate to the following 
 - Spring Boot app - http://localhost:8080/test
 - Prometheus      - http://localhost:9090/
 - Grafana         - http://localhost:3000/
-
-- We can stop&remove containers by running:
-
-```bash
-docker-compose down
-```
